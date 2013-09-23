@@ -5,14 +5,17 @@ import pifacedigitalio
 
 quitting = False
 paused = False
+delay = 0
+pattern = 0
+leds = []
 
 # Toggle the speed (fast / slow)
 def toggleSpeed(event):
 	global delay
-	if delay == 0.01:
-		delay = 0.03
-	else:
+	if delay == 0.03:
 		delay = 0.01
+	else:
+		delay = 0.03
 
 # Toggle the pattern (Knight Rider / Supercollider)
 def togglePattern(event):
